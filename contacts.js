@@ -35,7 +35,7 @@ async function removeContact(contactId) {
     const data = JSON.parse(await fs.readFile(contactsPath)).filter(
       (contact) => parseInt(contact.id) !== contactId
     );
-    await fs.writeFile(contactsPath, JSON.stringify(data, "\t"));
+    await fs.writeFile(contactsPath, JSON.stringify(data, null, 4));
     return console.log(await fs.readFile(contactsPath, "utf-8"));
   } catch (err) {
     return console.log(err.message);
