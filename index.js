@@ -22,7 +22,7 @@ function invokeAction({ action, id, name, email, phone }) {
       break;
 
     case "add":
-      addContact(name, email, phone);
+      name, email, phone;
       break;
 
     case "remove":
